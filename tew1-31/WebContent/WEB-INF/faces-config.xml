@@ -106,11 +106,7 @@
 			<from-outcome>exito9</from-outcome>
 			<to-view-id>/restricted/añadir_seguidores.xhtml</to-view-id>
 		</navigation-case>
-		<navigation-case>
-			<from-action>#{controllerUsuario.eliminarSeguidor()}</from-action>
-			<from-outcome>exito303</from-outcome>
-			<to-view-id>/restricted/listadoSeguidores.xhtml</to-view-id>
-		</navigation-case>
+		
 		<navigation-case>
 			<from-outcome>exitoTodosFuera</from-outcome>
 			<to-view-id>/index.xhtml</to-view-id>
@@ -129,17 +125,40 @@
 			<to-view-id>/restricted/misFotos.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-
-<!-- ///////////////////////// LISTADOSEGUIDORES ///////////////////////////////// -->
-	<navigation-rule>
-	  <from-view-id>/restricted/opciones_usuario.xhtml</from-view-id>
+		<navigation-rule>
+		<from-view-id>/restricted/nueva_foto.xhtml</from-view-id>
 		<navigation-case>
-			<from-action>#{controllerSeguidor.buscarSeguidores()}</from-action>
-			<from-outcome>exito2202</from-outcome>
-			<to-view-id>/restricted/listadoSeguidores.xhtml</to-view-id>
+			<from-action>#{controllerFoto.subirFoto()}</from-action>
+			<from-outcome>exito8</from-outcome>
+			<to-view-id>/restricted/misFotos.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 
+<navigation-rule>
+		<from-view-id>/restricted/misFotos.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{controllerFoto.eliminar(vafoto90)}</from-action>
+			<from-outcome>exito14</from-outcome>
+			<to-view-id>/restricted/misFotos.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+<!-- ///////////////////////// LISTADOSEGUIDORES ///////////////////////////////// -->
+		<navigation-rule>
+		  <from-view-id>/restricted/opciones_usuario.xhtml</from-view-id>
+			<navigation-case>
+				<from-action>#{controllerSeguidor.buscarSeguidores()}</from-action>
+				<from-outcome>exito2202</from-outcome>
+				<to-view-id>/restricted/listadoSeguidores.xhtml</to-view-id>
+			</navigation-case>
+		</navigation-rule>
+		<navigation-rule>
+			  <from-view-id>/restricted/listadoSeguidores.xhtml</from-view-id>
+				<navigation-case>
+					<from-action>#{controllerSeguidor.eliminarSeguidor(vauser16.email_usuario)}</from-action>
+					<from-outcome>exito47</from-outcome>
+					<to-view-id>/restricted/listadoSeguidores.xhtml</to-view-id>
+				</navigation-case>
+				</navigation-rule>
 <!-- ///////////////////////// AÑADIR SEGUIDORES ///////////////////////////////// -->
 	<navigation-rule>
 		<from-view-id>/restricted/añadir_seguidores.xhtml</from-view-id>

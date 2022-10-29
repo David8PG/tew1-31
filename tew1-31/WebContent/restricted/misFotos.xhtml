@@ -11,19 +11,24 @@
 
 	<ui:define name="cuerpo">
 		<h:form>
-			<p:dataTable var="vafoto" value="#{controllerFoto.auxiliar}"
+			<p:dataTable id="tabla90" var="vafoto90" value="#{controllerFoto.auxiliar}"
 				style="margin-bottom:40px">
 
-				<p:column headerText="#{msgs.tablaTitulo}" sortBy="#{vafoto.titulo}">
-					<h:outputText value="#{vafoto.titulo}" />
+				<p:column headerText="#{msgs.tablaTitulo}" sortBy="#{vafoto90.titulo}">
+					<h:outputText value="#{vafoto90.titulo}" />
 				</p:column>
 
 				<p:column headerText="#{msgs.tablaPath}" width="50%">
-					<img src="#{vafoto.path}" alt="imagen"/>
+					<img src="#{vafoto90.path}" alt="imagen"/>
 				</p:column>
 				
-				<p:column headerText="#{msgs.tablaFecha}" sortBy="#{vafoto.fecha_legible}">
-					<h:outputText value="#{vafoto.fecha_legible}" />
+				<p:column headerText="#{msgs.tablaFecha}" sortBy="#{vafoto90.fecha_legible}">
+					<h:outputText value="#{vafoto90.fecha_legible}" />
+				</p:column>
+				<p:column headerText="#{msgs.tablaBorrar}" >
+					<p:commandLink action="#{controllerFoto.eliminar(vafoto90)}" 
+					value="#{msgs.borrarFoto}" update="tabla90">
+				</p:commandLink>
 				</p:column>
 			</p:dataTable>
 		</h:form>

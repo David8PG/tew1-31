@@ -14,5 +14,6 @@ public interface FotoDao {
 	void save(Foto f) throws AlreadyPersistedException;
 	Foto findById(Long id);
 	void delete(String email) throws NotPersistedException;
+	void delete1(Foto f) throws NotPersistedException;
 	
 }

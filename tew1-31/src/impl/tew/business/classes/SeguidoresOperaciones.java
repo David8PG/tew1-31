@@ -73,4 +73,22 @@ public class SeguidoresOperaciones {
 			e.printStackTrace();
 		}
 	}
+
+	public void delete1(String email_usuario, String email_seguidor) {
+		SeguidoresDao seguidores = Factories.persistence.createSeguidoresDao();
+
+		try {
+			seguidores.delete1(email_usuario,email_seguidor);
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public List<Seguidores> getCandidatos1(String email_usuario) {
+
+		SeguidoresDao seguidores = Factories.persistence.createSeguidoresDao();
+		return seguidores.getCandidatos1(email_usuario);
+	}
 }

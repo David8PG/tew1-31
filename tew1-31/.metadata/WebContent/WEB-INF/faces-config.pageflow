@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14468168361820" configfile="/tew1-31/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="1553" id="pf14468173717861" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16661008530820 pf16661008782566 pf16665233662130 pf16665233662131 pf16665233662133 pf16665233662134 pf16665233662138 pf16665277422881 pf16665277702194 pf16666189322192 pf16666473489213 pf16666907066310 pf16667011574880 pf16667040039131" path="*"/>
-  <nodes xsi:type="pageflow:PFPage" name="faces/error.xhtml" x="122" y="380" id="pf14468173717863" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" path="/faces/error.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="338" y="2224" id="pf14468173717864" referenceLink="//@navigationRule.9/@fromViewId|" outlinks="pf16661008530824 pf166652336621310 pf166652336621311 pf16666178467271" inlinks="pf16661008530820 pf16661008530824 pf16661008782566 pf16665233662138 pf166652336621312 pf166652336621313" path="/index.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" x="122" y="966" id="pf144681737178612" referenceLink="//@navigationRule.2/@fromViewId|" path="/altaForm.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="editForm.xhtml" x="122" y="1937" id="pf144681737178613" referenceLink="//@navigationRule.3/@fromViewId|" path="/editForm.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="opciones.xhtml" x="122" y="3089" id="pf16661008530825" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" path="/opciones.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="1351" id="pf14468173717861" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16661008530820 pf16661008782566 pf16665233662130 pf16665233662131 pf16665233662133 pf16665233662134 pf16665233662138 pf16665277422881 pf16665277702194 pf16666189322192 pf16666473489213 pf16666907066310 pf16667040039131 pf16670373315130" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="faces/error.xhtml" x="122" y="572" id="pf14468173717863" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" path="/faces/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="338" y="2224" id="pf14468173717864" referenceLink="//@navigationRule.12/@fromViewId|" outlinks="pf16670429402293 pf16670429402294 pf16670429402295 pf16670429402296" inlinks="pf16661008530820 pf16661008782566 pf16665233662138 pf16670429402297 pf16670429402298 pf16670429402295" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" x="122" y="1735" id="pf144681737178612" referenceLink="//@navigationRule.2/@fromViewId|" path="/altaForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="editForm.xhtml" x="122" y="2119" id="pf144681737178613" referenceLink="//@navigationRule.3/@fromViewId|" path="/editForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="opciones.xhtml" x="122" y="3271" id="pf16661008530825" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" path="/opciones.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="restricted/error.xhtml" x="338" y="178" id="pf166652336621314" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16665233662130" path="/restricted/error.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="restricted/misFotos.xhtml" x="770" y="848" id="pf166652336621315" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf16665233662131 pf166652336621316 pf166652336621317" path="/restricted/misFotos.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="restricted/listado_admin_usu.xhtml" x="338" y="1840" id="pf166652336621321" referenceLink="//@navigationRule.7/@navigationCase.1/@toViewId|" outlinks="pf166652336621322 pf166652336621323" inlinks="pf16665233662133 pf166652336621324 pf166652336621322 pf166652336621323" path="/restricted/listado_admin_usu.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="restricted/nueva_foto.xhtml" x="338" y="562" id="pf166652336621325" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf166652336621316" inlinks="pf16665233662134" path="/restricted/nueva_foto.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="restricted/add_friends.xhtml" x="338" y="946" id="pf166652336621326" referenceLink="//@navigationRule.3/@navigationCase.1/@toViewId|" outlinks="pf166652339933037 pf166652341223939" inlinks="pf166652339933037 pf166652341223939 pf16665277702194" path="/restricted/añadir_seguidores.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="restricted/opciones_usuario.xhtml" x="554" y="1819" id="pf166652336621330" referenceLink="//@navigationRule.9/@navigationCase.0/@toViewId|" outlinks="pf166652336621317 pf166652343460940 pf16666501791005" inlinks="pf166652336621331 pf16666178467271 pf16666189322192" path="/restricted/opciones_usuario.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="restricted/opciones_admin.xhtml" x="122" y="2321" id="pf166652336621332" referenceLink="//@navigationRule.9/@navigationCase.1/@toViewId|" outlinks="pf166652336621324 pf166652336621312" inlinks="pf166652336621310" path="/restricted/opciones_admin.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="AltaUsuario.xhtml" x="122" y="2705" id="pf166652336621333" referenceLink="//@navigationRule.9/@navigationCase.3/@toViewId|" outlinks="pf166652336621313 pf166652336621331 pf166652336621334 pf166652336621335" inlinks="pf166652336621334 pf166652336621335 pf166652336621311" path="/AltaUsuario.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="restricted/peticiones.xhtml" x="770" y="1232" id="pf166652343460941" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" outlinks="pf166652346481743" inlinks="pf166652343460940 pf166652346481743 pf16665277422881" path="/restricted/peticiones.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="restricted/listadoSeguidores.xhtml" x="770" y="1616" id="pf16666329726834" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf16666473489213 pf16666501791005 pf16666907066310 pf16667011574880" path="/restricted/listadoSeguidores.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="restricted/fotoSeguidor.xhtml" x="338" y="1330" id="pf16667040039132" referenceLink="//@navigationRule.0/@navigationCase.10/@toViewId|" inlinks="pf16667040039131" path="/restricted/fotoSeguidor.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/misFotos.xhtml" x="770" y="1148" id="pf166652336621315" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" outlinks="pf16670406224162" inlinks="pf16665233662131 pf166652336621316 pf16670373315131 pf16670406224162 pf16670429402299" path="/restricted/misFotos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/listado_admin_usu.xhtml" x="338" y="1840" id="pf166652336621321" referenceLink="//@navigationRule.10/@navigationCase.1/@toViewId|" outlinks="pf166704294022910 pf166704294022911" inlinks="pf16665233662133 pf166704294022912 pf166704294022910 pf166704294022911" path="/restricted/listado_admin_usu.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/nueva_foto.xhtml" x="338" y="562" id="pf166652336621325" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf166652336621316 pf16670373315131" inlinks="pf16665233662134" path="/restricted/nueva_foto.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/add_friends.xhtml" x="338" y="946" id="pf166652336621326" referenceLink="//@navigationRule.6/@navigationCase.1/@toViewId|" outlinks="pf166704294022913 pf166704294022914" inlinks="pf16665277702194 pf166704294022913 pf166704294022914" path="/restricted/añadir_seguidores.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/opciones_usuario.xhtml" x="554" y="1873" id="pf166652336621330" referenceLink="//@navigationRule.12/@navigationCase.0/@toViewId|" outlinks="pf16666501791005 pf16670429402299 pf166704294022915" inlinks="pf16666189322192 pf166704294022916 pf16670429402293" path="/restricted/opciones_usuario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/peticiones.xhtml" x="770" y="1937" id="pf166652343460941" referenceLink="//@navigationRule.9/@navigationCase.0/@toViewId|" outlinks="pf166704294022917" inlinks="pf16665277422881 pf166704294022915 pf166704294022917" path="/restricted/peticiones.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/listadoSeguidores.xhtml" x="770" y="1553" id="pf16666329726834" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" outlinks="pf166704294022918" inlinks="pf16666473489213 pf16666501791005 pf16666907066310 pf166704294022918" path="/restricted/listadoSeguidores.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/fotoSeguidor.xhtml" x="338" y="1351" id="pf16667040039132" referenceLink="//@navigationRule.0/@navigationCase.11/@toViewId|" inlinks="pf16667040039131 pf16670373315130" path="/restricted/fotoSeguidor.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/opciones_admin.xhtml" id="pf166704294022919" referenceLink="//@navigationRule.12/@navigationCase.1/@toViewId|" outlinks="pf166704294022912 pf16670429402297" inlinks="pf16670429402294" path="/restricted/opciones_admin.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="AltaUsuario.xhtml" id="pf166704294022920" referenceLink="//@navigationRule.12/@navigationCase.3/@toViewId|" outlinks="pf16670429402298 pf166704294022916 pf166704294022921 pf166704294022922" inlinks="pf166704294022921 pf166704294022922 pf16670429402296" path="/AltaUsuario.xhtml"/>
   <links id="pf16661008530820" target="pf14468173717864" source="pf14468173717861" outcome="login"/>
   <links id="pf16661008782566" target="pf14468173717864" source="pf14468173717861" outcome="exito" fromaction="#{login.logout(usuario.email)}"/>
   <links id="pf16665233662130" target="pf166652336621314" source="pf14468173717861" outcome="error"/>
@@ -25,61 +25,32 @@
   <links id="pf16665233662134" target="pf166652336621325" source="pf14468173717861" outcome="nuevaFoto"/>
   <links id="pf16665233662138" target="pf14468173717864" source="pf14468173717861" outcome="exitoTodosFuera"/>
   <links id="pf166652336621316" target="pf166652336621315" source="pf166652336621325" outcome="exito4" fromaction="#{controllerFoto.salva}"/>
-  <links id="pf166652336621317" target="pf166652336621315" source="pf166652336621330" outcome="exito2" fromaction="#{controllerFoto.listadoEmail()}"/>
-  <links id="pf166652336621324" target="pf166652336621321" source="pf166652336621332" outcome="exito" fromaction="#{controllerUsuario.listado}"/>
-  <links id="pf166652336621312" target="pf14468173717864" source="pf166652336621332" outcome="exitoTodosFuera" fromaction="#{controllerUsuario.reset}"/>
-  <links id="pf166652336621313" target="pf14468173717864" source="pf166652336621333" outcome="login"/>
-  <links id="pf166652336621331" target="pf166652336621330" source="pf166652336621333" outcome="exito" fromaction="#{controllerUsuario.salva}"/>
-  <links id="pf166652336621310" target="pf166652336621332" source="pf14468173717864" outcome="successAdmin" fromaction="#{login.verify}"/>
-  <links id="pf166652336621311" target="pf166652336621333" source="pf14468173717864" outcome="registrar"/>
-  <links id="pf166652343460940" target="pf166652343460941" source="pf166652336621330" outcome="exito3" fromaction="#{controllerSeguidor.listadoEmail2()}"/>
   <links id="pf16665277422881" target="pf166652343460941" source="pf14468173717861" outcome="exito3" fromaction="#{controllerSeguidor.listadoEmail2()}"/>
   <links id="pf16665277702194" target="pf166652336621326" source="pf14468173717861" outcome="exito9" fromaction="#{controllerUsuario.filtrar()}"/>
-  <links id="pf16666178467271" target="pf166652336621330" source="pf14468173717864" outcome="successUsuario" fromaction="#{login.verify}"/>
   <links id="pf16666189322192" target="pf166652336621330" source="pf14468173717861" outcome="exitoAmis" fromaction="#{controllerFoto.listadoSeguidores()}"/>
   <links id="pf16666473489213" target="pf16666329726834" source="pf14468173717861" outcome="exito3000" fromaction="#{controllerSeguidor.listado()}"/>
   <links id="pf16666501791005" target="pf16666329726834" source="pf166652336621330" outcome="exito2202" fromaction="#{controllerSeguidor.buscarSeguidores()}"/>
   <links id="pf16666907066310" target="pf16666329726834" source="pf14468173717861" outcome="exitoBuscar2" fromaction="#{controllerSeguidor.buscarSeguidores()}"/>
-  <links id="pf16667011574880" target="pf16666329726834" source="pf14468173717861" outcome="exito303" fromaction="#{controllerUsuario.eliminarSeguidor()}"/>
   <links id="pf16667040039131" target="pf16667040039132" source="pf14468173717861" outcome="exito50" fromaction="#{controllerFoto.verFotosSegui(vauser16.email_usuario)}"/>
-  <links id="pf16661008530824" target="pf14468173717864" source="pf14468173717864" outcome="login" fromaction="#{login.verify}">
-    <bendPoints d1Height="-36" d2Height="-36"/>
-    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
-    <bendPoints d1Width="-64" d2Width="-64"/>
-  </links>
-  <links id="pf166652336621322" target="pf166652336621321" source="pf166652336621321" outcome="exito" fromaction="#{controllerUsuario.baja(vauser)}">
-    <bendPoints d1Height="-36" d2Height="-36"/>
-    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
-    <bendPoints d1Width="-64" d2Width="-64"/>
-  </links>
-  <links id="pf166652336621323" target="pf166652336621321" source="pf166652336621321" outcome="errorEstaSesion">
-    <bendPoints d1Height="-66" d2Height="-66"/>
-    <bendPoints d1Width="-94" d1Height="-66" d2Width="-94" d2Height="-66"/>
-    <bendPoints d1Width="-94" d2Width="-94"/>
-  </links>
-  <links id="pf166652336621334" target="pf166652336621333" source="pf166652336621333" outcome="errorcontra" fromaction="#{controllerUsuario.salva}">
-    <bendPoints d1Height="-36" d2Height="-36"/>
-    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
-    <bendPoints d1Width="-64" d2Width="-64"/>
-  </links>
-  <links id="pf166652336621335" target="pf166652336621333" source="pf166652336621333" outcome="errorExisteUsuario" fromaction="#{controllerUsuario.salva}">
-    <bendPoints d1Height="-66" d2Height="-66"/>
-    <bendPoints d1Width="-94" d1Height="-66" d2Width="-94" d2Height="-66"/>
-    <bendPoints d1Width="-94" d2Width="-94"/>
-  </links>
-  <links id="pf166652339933037" target="pf166652336621326" source="pf166652336621326" outcome="exito9" fromaction="#{controllerUsuario.filtrar()}">
-    <bendPoints d1Height="-36" d2Height="-36"/>
-    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
-    <bendPoints d1Width="-64" d2Width="-64"/>
-  </links>
-  <links id="pf166652341223939" target="pf166652336621326" source="pf166652336621326" outcome="exito73" fromaction="#{controllerUsuario.peticion(vauser4)}">
-    <bendPoints d1Height="-66" d2Height="-66"/>
-    <bendPoints d1Width="-94" d1Height="-66" d2Width="-94" d2Height="-66"/>
-    <bendPoints d1Width="-94" d2Width="-94"/>
-  </links>
-  <links id="pf166652346481743" target="pf166652343460941" source="pf166652343460941" outcome="LCAP" fromaction="#{controllerSeguidor.aceptar(vauser3.email_usuario)}">
-    <bendPoints d1Height="-36" d2Height="-36"/>
-    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
-    <bendPoints d1Width="-64" d2Width="-64"/>
-  </links>
+  <links id="pf16670373315130" target="pf16667040039132" source="pf14468173717861" outcome="exito50" fromaction="#{controllerFoto.verFotosSegui(vafoto2.email)}"/>
+  <links id="pf16670373315131" target="pf166652336621315" source="pf166652336621325" outcome="exito8" fromaction="#{controllerFoto.subirFoto()}"/>
+  <links id="pf16670406224162" target="pf166652336621315" source="pf166652336621315" outcome="exito14" fromaction="#{controllerFoto.eliminar(vafoto90)}"/>
+  <links id="pf166704294022913" target="pf166652336621326" source="pf166652336621326" outcome="exito9" fromaction="#{controllerUsuario.filtrar()}"/>
+  <links id="pf166704294022914" target="pf166652336621326" source="pf166652336621326" outcome="exito73" fromaction="#{controllerUsuario.peticion(vauser4)}"/>
+  <links id="pf16670429402299" target="pf166652336621315" source="pf166652336621330" outcome="exito2" fromaction="#{controllerFoto.listadoEmail()}"/>
+  <links id="pf166704294022915" target="pf166652343460941" source="pf166652336621330" outcome="exito3" fromaction="#{controllerSeguidor.listadoEmail2()}"/>
+  <links id="pf166704294022912" target="pf166652336621321" source="pf166704294022919" outcome="exito" fromaction="#{controllerUsuario.listado}"/>
+  <links id="pf16670429402297" target="pf14468173717864" source="pf166704294022919" outcome="exitoTodosFuera" fromaction="#{controllerUsuario.reset}"/>
+  <links id="pf166704294022917" target="pf166652343460941" source="pf166652343460941" outcome="LCAP" fromaction="#{controllerSeguidor.aceptar(vauser3.email_usuario)}"/>
+  <links id="pf166704294022910" target="pf166652336621321" source="pf166652336621321" outcome="exito" fromaction="#{controllerUsuario.baja(vauser)}"/>
+  <links id="pf166704294022911" target="pf166652336621321" source="pf166652336621321" outcome="errorEstaSesion"/>
+  <links id="pf16670429402298" target="pf14468173717864" source="pf166704294022920" outcome="login"/>
+  <links id="pf166704294022916" target="pf166652336621330" source="pf166704294022920" outcome="exito" fromaction="#{controllerUsuario.salva}"/>
+  <links id="pf166704294022921" target="pf166704294022920" source="pf166704294022920" outcome="errorcontra" fromaction="#{controllerUsuario.salva}"/>
+  <links id="pf166704294022922" target="pf166704294022920" source="pf166704294022920" outcome="errorExisteUsuario" fromaction="#{controllerUsuario.salva}"/>
+  <links id="pf16670429402293" target="pf166652336621330" source="pf14468173717864" outcome="successUsuario" fromaction="#{login.verify}"/>
+  <links id="pf16670429402294" target="pf166704294022919" source="pf14468173717864" outcome="successAdmin" fromaction="#{login.verify}"/>
+  <links id="pf16670429402295" target="pf14468173717864" source="pf14468173717864" outcome="login" fromaction="#{login.verify}"/>
+  <links id="pf16670429402296" target="pf166704294022920" source="pf14468173717864" outcome="registrar"/>
+  <links id="pf166704294022918" target="pf16666329726834" source="pf16666329726834" outcome="exito47" fromaction="#{controllerSeguidor.eliminarSeguidor(vauser16.email_usuario)}"/>
 </pageflow:Pageflow>

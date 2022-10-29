@@ -109,22 +109,23 @@ public class BeanSeguidores implements Serializable {
 
 	}
 	
-	/*public String eliminarSeguidor(Seguidores s) {
-		
-		
+	public String eliminarSeguidor(String s) {
+
 		SeguidoresService service;
+		
 		try {
 			
 			service= Factories.services.createSeguidoresService();
-			seguidores = (Seguidores []) service.delete1(login.getEmail(),s.getEmail_seguidor()).toArray(new Seguidores[0]);
-			return "exitoBuscar2";
+			service.delete1(login.getEmail(),s);
+			seguidores = (Seguidores []) service.getCandidatos1(login.getEmail()).toArray(new Seguidores[0]);
+			return "exito47";
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 			return "error";
 		}
 
-	}*/
+	}
 		
 	
 	

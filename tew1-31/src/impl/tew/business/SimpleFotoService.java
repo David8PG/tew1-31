@@ -58,4 +58,10 @@ public class SimpleFotoService implements FotoService{
 
 		return new FotoBuscar().findById(id);
 	}
+
+	@Override
+	public void delete1(Foto f) throws Exception {
+	
+		new FotoBorrado().delete1(f);
+	}
 }

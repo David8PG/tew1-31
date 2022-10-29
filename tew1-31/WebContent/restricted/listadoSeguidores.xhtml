@@ -13,10 +13,10 @@
 	
 		<h:form>
 		
-			<p:dataTable id="tabla16" var="vauser16"
+			<p:dataTable id="tabla90" var="vauser16"
 				value="#{controllerSeguidor.seguidores}" border="1">
 				<p:column>
-					<f:facet name="header">#{msgs.tablaEmail}</f:facet>#{vauser16.email_usuario}</p:column>
+					<f:facet name="header">#{msgs.tablaEmail}</f:facet>#{vauser16.email_usuario} #{vauser16.email_seguidor}</p:column>
 				<p:column>
 					<f:facet name="header">#{msgs.tablaFotos}</f:facet>
 					<p:commandLink action="#{controllerFoto.verFotosSegui(vauser16.email_usuario)}"
@@ -25,10 +25,10 @@
 					</p:column>
 				<p:column>
 				    <f:facet name="header">#{msgs.tablaDejarSeguir}</f:facet>
-				    <p:commandLink action="#{controllerSeguidor.eliminarSeguidor(vauser16)}"
+				    <p:commandButton  action="#{controllerSeguidor.eliminarSeguidor(vauser16.email_seguidor)}"
 						type="submit" value="#{msgs.dejarSeguir}" immediate="true"
-						update="tabla16">
-					</p:commandLink>
+						update="tabla90">
+					</p:commandButton> 
 				</p:column>  
 			</p:dataTable>
 		</h:form>

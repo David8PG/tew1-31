@@ -23,13 +23,17 @@
 					
 					#{msgs.tablaPath}
 					<h:panelGroup>
-						<p:inputText value="#{controllerFoto.foto.path}" required="true"
+						<p:fileUpload value="#{UploadedFile.write('data/')}" mode="simple"/>
+       					<p:commandButton value="Submit" ajax="false" action="#{controllerFoto.subirFoto()}"/>
+					
+		
+						<!--  <p:inputText value="#{controllerFoto.foto.path}" required="true"
 							requiredMessage="#{msgs.formPath_foto_requiredMessage}"
 							validatorMessage="#{msgs.formPath_foto_validatorMessage}"
 							id="path">
 							<f:validateLength maximum="20" />
 						</p:inputText>
-						<p:message for="path" />
+						<p:message for="path" />-->
 					</h:panelGroup>
 				</p:panelGrid>
 				

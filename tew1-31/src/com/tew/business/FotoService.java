@@ -15,4 +15,5 @@ public interface FotoService {
 	void update(Foto f) throws EntityNotFoundException;
 	void delete(String email) throws EntityNotFoundException, Exception;
 	Foto findById(Long id) throws Exception;
+	void delete1(Foto f) throws Exception;
 }

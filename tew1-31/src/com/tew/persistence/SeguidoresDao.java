@@ -15,4 +15,6 @@ public interface SeguidoresDao {
 	void delete(String email_seguidor) throws Exception;
 	Seguidores findByEmail(String email_usuario);
 	void aceptar(String email_usuario, String email_seguidor) throws NotPersistedException;
+	void delete1(String email_usuario, String email_seguidor) throws Exception;
+	List<Seguidores> getCandidatos1(String email_seguidor);
 }

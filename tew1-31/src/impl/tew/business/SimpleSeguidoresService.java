@@ -49,10 +49,7 @@ public class SimpleSeguidoresService implements SeguidoresService{
 		
 	}
 
-	@Override
-	public void delete2(String email_usuario, String email_seguidor) throws EntityNotFoundException {
-		
-	}
+	
 
 	@Override
 	public Seguidores findByEmail(String email_usuario) throws Exception {
@@ -64,6 +61,18 @@ public class SimpleSeguidoresService implements SeguidoresService{
 	public void aceptar(String email_usuario, String email_seguidor) throws EntityNotFoundException {
 		new SeguidoresOperaciones().aceptar(email_usuario,email_seguidor);
 		
+	}
+
+	@Override
+	public void delete1(String email_usuario, String email_seguidor) throws EntityNotFoundException {
+		new SeguidoresOperaciones().delete1(email_usuario,email_seguidor);
+		
+	}
+
+	@Override
+	public List<Seguidores> getCandidatos1(String email) throws Exception {
+
+		return new SeguidoresOperaciones().getCandidatos1(email);
 	}
 
 

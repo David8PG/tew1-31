@@ -180,8 +180,60 @@ public class BeanFotos implements Serializable {
 			return "error";
 		}	
 	}
+	public String subirFoto() {
+		
+		System.out.println("Subinedo foto");
+		FotoService service;
+		Foto f = new Foto();
 
+		f.setEmail(login.getEmail());
+		f.setTitulo(foto.getTitulo());
+		f.setPath(foto.getPath());
+		Date actual = new Date();
+		long fecha= actual.getTime();
+		f.setFecha(fecha);
 
+		try {
+
+			System.out.println(f.getTitulo());
+
+			service = Factories.services.createFotoService();
+			service.save(f);
+			listadoEmail();
+
+			return "exito8";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "error";
+		}	
+	}
+	public String eliminar(Foto f) {
+
+		FotoService service;
+		f.setEmail(login.getEmail());
+		f.setTitulo(foto.getTitulo());
+		f.setPath(foto.getPath());
+		Date actual = new Date();
+		long fecha= actual.getTime();
+		f.setFecha(fecha);
+
+		try {
+
+			System.out.println(f.getTitulo());
+
+			service = Factories.services.createFotoService();
+			service.delete1(f);
+			listadoEmail();
+
+			return "exito14";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "error";
+		}	
+	}
+	
 	@PostConstruct
 	public void init() {
 
