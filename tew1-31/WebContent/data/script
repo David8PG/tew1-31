@@ -1,0 +1,99 @@
+DROP TABLE USUARIOS
+DROP TABLE FOTOS
+DROP TABLE SEGUIDORES
+
+CREATE TABLE USUARIOS 
+   (EMAIL varchar (30) PRIMARY KEY,
+   PASSWD varchar(30) NOT NULL,
+   ROL varchar(30) NOT NULL,
+   NOMBRE varchar(30) NOT NULL)
+
+
+CREATE TABLE FOTOS(
+    ID INTEGER NOT NULL PRIMARY KEY, 
+    FILEPATH  varchar(60) NOT NULL,
+    EMAIL varchar (30) NOT NULL,
+    FOREIGN KEY (EMAIL) REFERENCES USUARIOS(EMAIL),
+    TITULO varchar(30) NOT NULL,
+    FECHA BIGINT NOT NULL)       
+
+  
+CREATE TABLE SEGUIDORES(
+        EMAIL_USUARIO varchar (30) ,
+        FOREIGN KEY (EMAIL_USUARIO) REFERENCES USUARIOS(EMAIL),
+        EMAIL_SEGUIDOR varchar (30) ,
+        FOREIGN KEY (EMAIL_SEGUIDOR) REFERENCES USUARIOS(EMAIL),
+        ACEPTADA BIT NOT NULL,
+        PRIMARY KEY (EMAIL_USUARIO, EMAIL_SEGUIDOR)
+)
+
+
+INSERT INTO USUARIOS VALUES('admin@email.com','admin','administrador','admin1')
+INSERT INTO USUARIOS VALUES('user1@email.com','user1','usuario','user1')
+INSERT INTO USUARIOS VALUES('user2@email.com','user2','usuario','user2')
+INSERT INTO USUARIOS VALUES('user3@email.com','user3','usuario','user3')
+INSERT INTO USUARIOS VALUES('user4@email.com','user4','usuario','user4')
+INSERT INTO USUARIOS VALUES('user5@email.com','user5','usuario','user5')
+INSERT INTO USUARIOS VALUES('user6@email.com','user6','usuario','user6')
+INSERT INTO USUARIOS VALUES('user7@email.com','user7','usuario','user7')
+INSERT INTO USUARIOS VALUES('user8@email.com','user8','usuario','user8')
+INSERT INTO USUARIOS VALUES('user9@email.com','user9','usuario','user9')
+
+INSERT INTO FOTOS VALUES(0,'data/alps-7426887__340.jpg','user1@email.com','Hola',177777777777)
+INSERT INTO FOTOS VALUES(1,'data/beach-7411683_640.jpg','user1@email.com','Hola1',177776777777)
+INSERT INTO FOTOS VALUES(2,'data/bridge-7504605__340.jpg','user1@email.com','Hola2',177777777777)
+INSERT INTO FOTOS VALUES(3,'data/cloud-of-bunch-of-7372799__340.jpg','user2@email.com','Hola',177776777777)
+INSERT INTO FOTOS VALUES(4,'data/coast-6067736__340.jpg','user2@email.com','Hola1',177777777777)
+INSERT INTO FOTOS VALUES(5,'data/crane-houses-7518536_640.jpg','user2@email.com','Hola2',177776777777)
+INSERT INTO FOTOS VALUES(6,'data/hyacinth-macaw-7501470__340.jpg','user3@email.com','Hola',177777777777)
+INSERT INTO FOTOS VALUES(7,'data/sea-7484743__340.jpg','user3@email.com','Hola1',177776777777)
+INSERT INTO FOTOS VALUES(8,'data/whale-7446905_640.jpg','user3@email.com','Hola2',177777777777)
+INSERT INTO FOTOS VALUES(9,'data/elephant-6841179_640.jpg','user4@email.com','Hola',177776777777)
+INSERT INTO FOTOS VALUES(10,'data/cat-7523894__340.jpg','user4@email.com','Hola1',177777777777)
+INSERT INTO FOTOS VALUES(11,'data/man-7526514__340.jpg','user4@email.com','Hola2',177776777777)
+INSERT INTO FOTOS VALUES(12,'data/flamingos-7525793__340.jpg','user5@email.com','Hola',177777777777)
+INSERT INTO FOTOS VALUES(13,'data/sea-7519353__340.jpg','user5@email.com','Hola1',177776777777)
+INSERT INTO FOTOS VALUES(14,'data/sea-7375467_640.jpg','user5@email.com','Hola2',177777777777)
+INSERT INTO FOTOS VALUES(15,'data/bulldog-7476727__340.jpg','user6@email.com','Hola',177776777777)
+INSERT INTO FOTOS VALUES(16,'data/muslim-7520627__340.jpg','user6@email.com','Hola1',177777777777)
+INSERT INTO FOTOS VALUES(17,'data/buttercup-7422987__340.jpg','user6@email.com','Hola2',177776777777)
+INSERT INTO FOTOS VALUES(18,'data/houses-7495861_640.jpg','user7@email.com','Hola',177777777777)
+INSERT INTO FOTOS VALUES(19,'data/dough-7521444__340.jpg','user7@email.com','Hola1',177776777777)
+INSERT INTO FOTOS VALUES(20,'data/duck-7406987__340.jpg','user7@email.com','Hola2',177777777777)
+INSERT INTO FOTOS VALUES(21,'data/piano-7460435__340.jpg','user8@email.com','Hola',177776777777)
+INSERT INTO FOTOS VALUES(22,'data/tea-7331591__340.jpg','user8@email.com','Hola1',177777777777)
+INSERT INTO FOTOS VALUES(23,'data/hedgehog-7274569__340.jpg','user8@email.com','Hola2',177776777777)
+INSERT INTO FOTOS VALUES(24,'data/koyasan-temple-7387445__340.jpg','user9@email.com','Hola',177776777777)
+INSERT INTO FOTOS VALUES(25,'data/torii-7256271__340.jpg','user9@email.com','Hola1',177777777777)
+INSERT INTO FOTOS VALUES(26,'data/lighthouse-7486290__340.jpg','user9@email.com','Hola2',177776777777)
+
+
+
+INSERT INTO SEGUIDORES VALUES('user1@email.com','user2@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user1@email.com','user3@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user1@email.com','user4@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user1@email.com','user8@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user2@email.com','user1@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user2@email.com','user5@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user2@email.com','user6@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user3@email.com','user1@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user3@email.com','user7@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user3@email.com','user8@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user4@email.com','user1@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user4@email.com','user5@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user4@email.com','user9@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user5@email.com','user2@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user5@email.com','user4@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user5@email.com','user9@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user6@email.com','user2@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user6@email.com','user7@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user6@email.com','user9@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user7@email.com','user3@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user7@email.com','user6@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user7@email.com','user8@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user8@email.com','user1@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user8@email.com','user3@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user8@email.com','user7@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user9@email.com','user4@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user9@email.com','user5@email.com','1')
+INSERT INTO SEGUIDORES VALUES('user9@email.com','user6@email.com','1')

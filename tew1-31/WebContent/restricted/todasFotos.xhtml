@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templates/template-usuarios.xhtml">
+
+	<ui:define name="titulo">
+    #{msgs.tituloFotosTodas}
+    </ui:define>
+
+	<ui:define name="cuerpo">
+		<h:form>
+			<p:dataTable var="vafoto21" value="#{controllerFoto.auxiliar}"
+				style="margin-bottom:40px">
+
+				<p:column headerText="#{msgs.userTitulo}" sortBy="#{vafoto21.email}">
+	
+					<p:commandLink action="#{controllerFoto.verFotosSegui(vafoto21.email)}"
+						type="submit" immediate="true" value="#{vafoto21.email}">
+					</p:commandLink>
+				</p:column>				
+				
+				<p:column headerText="#{msgs.tablaTitulo}" >
+					<h:outputText value="#{vafoto21.titulo}" />
+				</p:column>
+
+				<p:column headerText="#{msgs.tablaPath}">
+					<img src="#{vafoto21.path}" alt="imagen"/>
+				</p:column>
+
+				<p:column headerText="#{msgs.tablaFecha}" >
+					<h:outputText value="#{vafoto21.fecha_legible}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</ui:define>
+	<ui:define name="pie">
+		<ui:include src="/snippets/salirSesion.xhtml" />
+	</ui:define>
+</ui:composition>
