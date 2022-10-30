@@ -4,6 +4,9 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
+	<script>
+
+</script>
 	<p:panelGrid columns="2">
 		<h:panelGroup>
 			<h:outputLabel for="name" value="#{msgs.login_form_name_label}" />
@@ -22,5 +25,13 @@
 				requiredMessage="#{msgs.login_form_password_label}: #{msgs.login_form_password_required}" />
 			<p:message for="password" />
 		</h:panelGroup>
+		<h:panelGroup>
+				<input type="checkbox" name="cookies" />
+		</h:panelGroup>
+		<h:panelGroup>
+			<h:outputLabel for="cookies"
+				value="#{msgs.login_form_cookie}" />
+		</h:panelGroup>
 	</p:panelGrid>
+
 </ui:composition>
