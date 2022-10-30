@@ -9,6 +9,9 @@ public class Foto {
 	private String path;
 	private long fecha;
 	private String fecha_legible;
+
+	
+
 	public Long getID() {
 		return ID;
 	}

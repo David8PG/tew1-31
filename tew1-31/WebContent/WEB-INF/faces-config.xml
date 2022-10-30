@@ -128,7 +128,7 @@
 		<navigation-rule>
 		<from-view-id>/restricted/nueva_foto.xhtml</from-view-id>
 		<navigation-case>
-			<from-action>#{controllerFoto.subirFoto()}</from-action>
+			<from-action>#{controllerFoto.subirFoto}</from-action>
 			<from-outcome>exito8</from-outcome>
 			<to-view-id>/restricted/misFotos.xhtml</to-view-id>
 		</navigation-case>

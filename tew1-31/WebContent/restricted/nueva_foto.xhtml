@@ -23,10 +23,8 @@
 					
 					#{msgs.tablaPath}
 					<h:panelGroup>
-						<p:fileUpload value="#{UploadedFile.write('data/')}" mode="simple"/>
-       					<p:commandButton value="Submit" ajax="false" action="#{controllerFoto.subirFoto()}"/>
-					
-		
+						<p:fileUpload value="Subir" fileUploadListener="#{controllerFoto.subirFoto}"  mode="advanced"/>
+       					
 						<!--  <p:inputText value="#{controllerFoto.foto.path}" required="true"
 							requiredMessage="#{msgs.formPath_foto_requiredMessage}"
 							validatorMessage="#{msgs.formPath_foto_validatorMessage}"

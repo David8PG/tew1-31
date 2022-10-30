@@ -11,6 +11,10 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
+
+import org.primefaces.event.FileUploadEvent;
+import org.primefaces.model.UploadedFile;
+
 import com.tew.business.FotoService;
 import com.tew.infraestructure.Factories;
 import com.tew.model.Foto;
@@ -20,6 +24,8 @@ import com.tew.model.Foto;
 public class BeanFotos implements Serializable {
 
 	private static final long serialVersionUID = -1786803583194749666L;
+	
+
 
 	private Foto [] fotos = null;
 
@@ -180,12 +186,15 @@ public class BeanFotos implements Serializable {
 			return "error";
 		}	
 	}
-	public String subirFoto() {
-		
-		System.out.println("Subinedo foto");
+	
+	public String subirFoto(FileUploadEvent upload) throws Exception {
+		System.out.println("Subiendo foto");
+		System.out.println(upload.getFile().getFileName());
+		upload.getFile().write("S:/Local1-tew31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
 		FotoService service;
 		Foto f = new Foto();
-
+		
+		
 		f.setEmail(login.getEmail());
 		f.setTitulo(foto.getTitulo());
 		f.setPath(foto.getPath());
