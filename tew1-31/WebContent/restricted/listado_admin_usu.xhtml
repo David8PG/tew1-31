@@ -20,9 +20,9 @@
 				<p:column>
 					<f:facet name="header">#{msgs.tablaNombre}</f:facet>#{vauser.nombre}</p:column>
 				<p:column>
-					<f:facet name="header">#{msgs.tablaBorrar}</f:facet>
+					<f:facet name="header">#{msgs.tablaBorrarUsu}</f:facet>
 					<p:commandLink action="#{controllerUsuario.baja(vauser)}"
-						type="submit" value="#{msgs.tablaBorrar}" immediate="true"
+						type="submit" value="#{msgs.tablaBorrarUsu}" immediate="true"
 						update="tablalistadoAdmin :mensajes">
 					</p:commandLink>
 				</p:column>
