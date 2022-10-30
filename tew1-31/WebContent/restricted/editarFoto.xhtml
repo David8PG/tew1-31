@@ -23,12 +23,12 @@
 					
 					#{msgs.tablaPath}
 					<h:panelGroup>
-						<p:fileUpload value="Subir" fileUploadListener="#{controllerFoto.subirFoto}"  process="@form" mode="advanced"/>
+						<p:fileUpload value="Editar" fileUploadListener="#{controllerFoto.editarFoto}"  process="@form" mode="advanced"/>
 					</h:panelGroup>
 				</p:panelGrid>
 				
 				
-				<p:commandLink action="#{controllerFoto.salva}" process="@form"
+				<p:commandLink action="#{controllerFoto.editar}" process="@form"
 					value="#{msgs.guardar}">
 				</p:commandLink>
 		</h:form>

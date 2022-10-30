@@ -193,11 +193,41 @@ public class BeanFotos implements Serializable {
 		upload.getFile().write("S:/Local1-tew31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
 		FotoService service;
 		Foto f = new Foto();
-		
-		
 		f.setEmail(login.getEmail());
 		f.setTitulo(foto.getTitulo());
-		f.setPath(foto.getPath());
+		f.setPath("data/"+upload.getFile().getFileName());
+		System.out.println("data/"+upload.getFile().getFileName());
+		Date actual = new Date();
+		long fecha= actual.getTime();
+		f.setFecha(fecha);
+
+		try {
+
+			System.out.println(f.getTitulo());
+
+			service = Factories.services.createFotoService();
+			service.save(f);
+			listadoEmail();
+
+			return "exito8";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "error";
+		}	
+	}
+	
+	public String editarFoto(FileUploadEvent upload) throws Exception {
+		System.out.println("Subiendo foto");
+		System.out.println(upload.getFile().getFileName());
+		upload.getFile().write("S:/Local1-tew31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
+		FotoService service;
+		
+		Foto f = new Foto();
+		f.setEmail(login.getEmail());
+		f.setTitulo(foto.getTitulo());
+		f.setPath("data/"+upload.getFile().getFileName());
+		System.out.println("data/"+upload.getFile().getFileName());
 		Date actual = new Date();
 		long fecha= actual.getTime();
 		f.setFecha(fecha);
