@@ -6,7 +6,7 @@
 	template="/templates/template-usuarios.xhtml">
 
 	<ui:define name="titulo">
-    #{msgs.tituloListaAdmin}
+    #{msgs.tituloAnadirSeg}
     </ui:define>
 
 	<ui:define name="cuerpo">
@@ -24,9 +24,9 @@
 					<f:facet name="header">#{msgs.tablaEmail}</f:facet>#{vauser4.email}</p:column>
 				<p:column>
 					<f:facet name="header">#{msgs.tablaNombre}</f:facet>#{vauser4.nombre}</p:column>
-				<p:column>
+				<p:column headerText="#{msgs.tablaEnviar}">
 					<p:commandLink action="#{controllerUsuario.peticion(vauser4)}"
-						type="submit" value="#{msgs.tablaEnviar}" immediate="true"
+						type="submit" value="#{msgs.accionEnviar}" immediate="true"
 						update="tabla2">
 					</p:commandLink>
 				</p:column>
