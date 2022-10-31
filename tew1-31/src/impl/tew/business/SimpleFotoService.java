@@ -64,4 +64,10 @@ public class SimpleFotoService implements FotoService{
 	
 		new FotoBorrado().delete1(f);
 	}
+
+	@Override
+	public void editar(Foto f) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 }

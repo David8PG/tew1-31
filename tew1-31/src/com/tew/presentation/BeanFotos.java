@@ -190,7 +190,7 @@ public class BeanFotos implements Serializable {
 	public String subirFoto(FileUploadEvent upload) throws Exception {
 		System.out.println("Subiendo foto");
 		System.out.println(upload.getFile().getFileName());
-		upload.getFile().write("S:/Local1-tew31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
+		upload.getFile().write("S:/work/tew1-31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
 		FotoService service;
 		Foto f = new Foto();
 		f.setEmail(login.getEmail());
@@ -217,12 +217,12 @@ public class BeanFotos implements Serializable {
 		}	
 	}
 	
+	
 	public String editarFoto(FileUploadEvent upload) throws Exception {
 		System.out.println("Subiendo foto");
 		System.out.println(upload.getFile().getFileName());
-		upload.getFile().write("S:/Local1-tew31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
+		upload.getFile().write("S:/work/tew1-31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
 		FotoService service;
-		
 		Foto f = new Foto();
 		f.setEmail(login.getEmail());
 		f.setTitulo(foto.getTitulo());
@@ -240,13 +240,15 @@ public class BeanFotos implements Serializable {
 			service.save(f);
 			listadoEmail();
 
-			return "exito8";
+			return "exito407";
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 			return "error";
 		}	
 	}
+	
+
 	public String eliminar(Foto f) {
 
 		FotoService service;
@@ -266,6 +268,31 @@ public class BeanFotos implements Serializable {
 			listadoEmail();
 
 			return "exito14";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "error";
+		}	
+	}
+	public String eliminar1(Foto f) {
+
+		FotoService service;
+		f.setEmail(login.getEmail());
+		f.setTitulo(foto.getTitulo());
+		f.setPath(foto.getPath());
+		Date actual = new Date();
+		long fecha= actual.getTime();
+		f.setFecha(fecha);
+
+		try {
+
+			System.out.println(f.getTitulo());
+
+			service = Factories.services.createFotoService();
+			service.delete1(f);
+			listadoEmail();
+
+			return "exito104";
 		}
 		catch(Exception e) {
 			e.printStackTrace();

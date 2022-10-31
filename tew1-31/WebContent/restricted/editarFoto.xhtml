@@ -6,13 +6,13 @@
 	template="/templates/template-usuarios.xhtml">
 
 	<ui:define name="titulo">
-    #{msgs.tituloOperacionFoto}
+    #{msgs.tituloEditarFoto}
   </ui:define>
 	<ui:define name="cuerpo">
 		<center>
 		<h:form>
 				<p:panelGrid columns="2" cellpadding="5">
-					#{msgs.tablaTitulo}
+					#{msgs.tablaTituloEditar}
 					<h:panelGroup>
 						<p:inputText value="#{controllerFoto.foto.titulo}" required="true"
 							requiredMessage="#{msgs.formTitulo_foto_requiredMessage}"

@@ -116,6 +116,52 @@ public class FotoJdbcDao implements FotoDao{
 		}
 	}
 
+	@Override
+	public void editar(Foto f) throws AlreadyPersistedException {
+
+		PreparedStatement ps = null;
+		Connection con = null;
+		int rows = 0;
+		
+		try {
+
+			String SQL_DRV = "org.hsqldb.jdbcDriver";
+			String SQL_URL = "jdbc:hsqldb:hsql://localhost/localDB";
+			
+
+			Class.forName(SQL_DRV);
+			con = DriverManager.getConnection(SQL_URL, "sa", "");		
+			Statement statement = con.createStatement();
+	        ResultSet res = statement.executeQuery("SELECT MAX(ID) FROM PUBLIC.FOTOS");
+	        res.next();
+	        String sum = res.getString(1);
+	        Long a = Long.parseLong(sum);
+	        a++;
+			ps = con.prepareStatement("insert into PUBLIC.FOTOS (ID, FILEPATH,EMAIL,TITULO,FECHA) values ( ? , ?, ?, ?, ?)");
+			
+			ps.setLong(1,a);
+			ps.setString(2, f.getPath());
+			ps.setString(3, f.getEmail());
+			ps.setString(4, f.getTitulo());
+			ps.setLong(5, f.getFecha());
+			
+
+			rows = ps.executeUpdate();
+			if (rows != 1) {
+				throw new AlreadyPersistedException("Foto " + f + " already persisted");
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			throw new PersistenceException("Driver not found", e);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new PersistenceException("Invalid SQL or database schema ", e);
+		}
+		finally  {
+			if (ps != null) {try{ ps.close(); } catch (Exception ex){}};
+			if (con != null) {try{ con.close(); } catch (Exception ex){}};
+		}
+	}
 
 
 
