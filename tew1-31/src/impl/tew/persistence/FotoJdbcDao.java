@@ -239,7 +239,7 @@ public class FotoJdbcDao implements FotoDao{
 			while(rs.next()) {
 				
 				Date fecha_ok = new Date(rs.getLong("FECHA"));
-				SimpleDateFormat fecha_format = new SimpleDateFormat("dd/MM/yyyy");
+				SimpleDateFormat fecha_format = new SimpleDateFormat("dd/MM/yyyy , HH:mm:ss ");
 								
 				String Fecha=fecha_format.format(fecha_ok);
 
@@ -294,7 +294,7 @@ public class FotoJdbcDao implements FotoDao{
 			while(rs.next()) {
 				
 				Date fecha_ok = new Date(rs.getLong("FECHA"));
-				SimpleDateFormat fecha_format = new SimpleDateFormat("dd/MM/yyyy");
+				SimpleDateFormat fecha_format = new SimpleDateFormat("dd/MM/yyyy , HH:mm:ss ");
 								
 				String Fecha=fecha_format.format(fecha_ok);
 	
