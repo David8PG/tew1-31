@@ -1,5 +1,6 @@
 package com.tew.presentation;
 
+import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -249,8 +250,9 @@ public class BeanFotos implements Serializable {
 	}
 	
 
-	public String eliminar(Foto f) {
-
+	public String eliminar( Foto f) {
+		File imagen = new File("S:/work/tew1-31/tew1-31/WebContent/data/descarga.jpg");
+		System.out.print("Path "+foto.getPath());
 		FotoService service;
 		f.setEmail(login.getEmail());
 		f.setTitulo(foto.getTitulo());
@@ -260,13 +262,15 @@ public class BeanFotos implements Serializable {
 		f.setFecha(fecha);
 
 		try {
+			
+			     
 
 			System.out.println(f.getTitulo());
 
 			service = Factories.services.createFotoService();
 			service.delete1(f);
 			listadoEmail();
-
+			imagen.delete();
 			return "exito14";
 		}
 		catch(Exception e) {
@@ -275,7 +279,8 @@ public class BeanFotos implements Serializable {
 		}	
 	}
 	public String eliminar1(Foto f) {
-
+		File imagen = new File("S:/work/tew1-31/tew1-31/WebContent/data/descarga.jpg");
+		System.out.print("Path "+foto.getPath());
 		FotoService service;
 		f.setEmail(login.getEmail());
 		f.setTitulo(foto.getTitulo());
@@ -283,6 +288,7 @@ public class BeanFotos implements Serializable {
 		Date actual = new Date();
 		long fecha= actual.getTime();
 		f.setFecha(fecha);
+	
 
 		try {
 
@@ -291,6 +297,7 @@ public class BeanFotos implements Serializable {
 			service = Factories.services.createFotoService();
 			service.delete1(f);
 			listadoEmail();
+			imagen.delete();
 
 			return "exito104";
 		}
