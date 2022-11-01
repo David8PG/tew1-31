@@ -11,7 +11,7 @@
 
 	<ui:define name="cuerpo">
 		<h:form>
-			<p:dataTable id="tabla90" var="vafoto90" value="#{controllerFoto.auxiliar}"
+			<p:dataTable id="tabla90" var="vafoto90" value="#{controllerFoto.auxiliar}" sortBy="#{vafoto90.fecha}" sortOrder="descending"
 				style="margin-bottom:40px">
 
 				<p:column headerText="#{msgs.tablaTitulo}" sortBy="#{vafoto90.titulo}">
@@ -22,7 +22,7 @@
 					<img src="#{vafoto90.path}" alt="imagen"/>
 				</p:column>
 				
-				<p:column headerText="#{msgs.tablaFecha}" sortBy="#{vafoto90.fecha_legible}">
+				<p:column headerText="#{msgs.tablaFecha}" sortBy="#{vafoto90.fecha}">
 					<h:outputText value="#{vafoto90.fecha_legible}" />
 				</p:column>
 				<p:column headerText="#{msgs.tablaBorrar}" >

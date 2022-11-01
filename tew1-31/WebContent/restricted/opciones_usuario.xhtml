@@ -13,9 +13,9 @@
 		<h:form id="form-principal">
 		
 			<p:dataTable var="vafoto2" value="#{controllerFoto.auxiliar}"
-				style="margin-bottom:40px"  sortBy="#{vafoto2.fecha_legible}" sortOrder="descending">
+				style="margin-bottom:40px"  sortBy="#{vafoto2.fecha}" sortOrder="descending">
 
-				<p:column headerText="#{msgs.userTitulo}" sortBy="#{vafoto2.email}" >
+				<p:column headerText="#{msgs.userTitulo}">
 					
 					<p:commandLink action="#{controllerFoto.verFotosSegui(vafoto2.email)}"
 						type="submit" immediate="true" value="#{vafoto2.email}">
@@ -30,8 +30,9 @@
 					<img src="#{vafoto2.path}" alt="imagen"/>
 				</p:column>
 
-				<p:column headerText="#{msgs.tablaFecha}"  >
+				<p:column headerText="#{msgs.tablaFecha}" sortBy="#{vafoto2.fecha}" >
 					<h:outputText value="#{vafoto2.fecha_legible}" />
+			
 				</p:column>
 			</p:dataTable>
 				

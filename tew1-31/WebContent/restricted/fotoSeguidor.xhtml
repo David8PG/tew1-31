@@ -14,7 +14,7 @@
 			<p:dataTable var="vafoto20" value="#{controllerFoto.auxiliar}"
 				style="margin-bottom:40px">
 
-				<p:column headerText="#{msgs.userTitulo}" sortBy="#{vafoto20.email}">
+				<p:column headerText="#{msgs.userTitulo}">
 					<h:outputText value="#{vafoto20.email}" />
 				</p:column>				
 				
@@ -26,7 +26,7 @@
 					<img src="#{vafoto20.path}" alt="imagen"/>
 				</p:column>
 
-				<p:column headerText="#{msgs.tablaFecha}" >
+				<p:column headerText="#{msgs.tablaFecha}">
 					<h:outputText value="#{vafoto20.fecha_legible}" />
 				</p:column>
 			</p:dataTable>

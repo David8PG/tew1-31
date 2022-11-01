@@ -11,7 +11,7 @@
 
 	<ui:define name="cuerpo">
 		<h:form>
-			<p:dataTable var="vafoto21" value="#{controllerFoto.auxiliar}"
+			<p:dataTable var="vafoto21" value="#{controllerFoto.auxiliar}" sortBy="#{vafoto21.fecha}" sortOrder="descending"
 				style="margin-bottom:40px">
 
 				<p:column headerText="#{msgs.userTitulo}" sortBy="#{vafoto21.email}">

@@ -248,6 +248,7 @@ public class FotoJdbcDao implements FotoDao{
 				foto.setEmail(rs.getString("EMAIL"));
 				foto.setTitulo(rs.getString("TITULO"));
 				foto.setPath(rs.getString("FILEPATH"));
+				foto.setFecha(rs.getLong("FECHA"));
 				foto.setFecha_legible(Fecha);
 				
 				fotos.add(foto);
@@ -304,6 +305,7 @@ public class FotoJdbcDao implements FotoDao{
 				foto.setEmail(rs.getString("EMAIL"));
 				foto.setTitulo(rs.getString("TITULO"));
 				foto.setPath(rs.getString("FILEPATH"));
+				foto.setFecha(rs.getLong("FECHA"));
 				foto.setFecha_legible(Fecha);
 				
 				fotos.add(foto);
