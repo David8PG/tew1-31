@@ -91,7 +91,7 @@
 			<to-view-id>/restricted/opciones_usuario.xhtml</to-view-id>
 		</navigation-case>		
 			<navigation-case>
-			<from-action>#{controllerFoto.verFotosSegui(vauser16.email_usuario)}</from-action>
+			<from-action>#{controllerFoto.verFotosSegui(vauser16.email_seguidor)}</from-action>
 			<from-outcome>exito50</from-outcome>
 			<to-view-id>/restricted/fotoSeguidor.xhtml</to-view-id>
 		</navigation-case>	
