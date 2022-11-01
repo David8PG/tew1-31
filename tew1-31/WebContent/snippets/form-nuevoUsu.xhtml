@@ -35,7 +35,7 @@
   #{msgs.password}
   <h:panelGroup>
 			<p:password value="#{usuario.passwd}" required="true"
-				requiredMessage="#{msgs.login_form_password_required}"
+				requiredMessage="#{msgs.login_form_password_label}: #{msgs.login_form_password_required}"
 				validatorMessage="#{msgs.login_form_password_validator}"
 				id="password1">
 				<f:validateLength minimum="5" maximum="8" />
@@ -46,7 +46,7 @@
   #{msgs.repeat_password}
   <h:panelGroup>
 			<p:password value="#{usuario.passwd2}" required="true"
-				requiredMessage="#{msgs.login_form_password_required}"
+				requiredMessage="#{msgs.login_form_password_label}: #{msgs.login_form_password_required}"
 				validatorMessage="#{msgs.login_form_password_validator}"
 				id="password2">
 				<f:validateLength minimum="5" maximum="8" />

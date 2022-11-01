@@ -191,7 +191,7 @@ public class BeanFotos implements Serializable {
 	public String subirFoto(FileUploadEvent upload) throws Exception {
 		System.out.println("Subiendo foto");
 		System.out.println(upload.getFile().getFileName());
-		upload.getFile().write("S:/Local1-tew31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
+		upload.getFile().write("S:/Local1-tew31/tew1-31/tew1-31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
 		FotoService service;
 		Foto f = new Foto();
 		f.setEmail(login.getEmail());
@@ -222,7 +222,7 @@ public class BeanFotos implements Serializable {
 	public String editarFoto(FileUploadEvent upload) throws Exception {
 		System.out.println("Subiendo foto");
 		System.out.println(upload.getFile().getFileName());
-		upload.getFile().write("S:/work/tew1-31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
+		upload.getFile().write("S:/Local1-tew31/tew1-31/tew1-31/tew1-31/WebContent/data/"+upload.getFile().getFileName());
 		FotoService service;
 		Foto f = new Foto();
 		f.setEmail(login.getEmail());
