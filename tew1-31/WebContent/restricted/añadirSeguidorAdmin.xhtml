@@ -21,12 +21,23 @@
 					<f:facet name="header">#{msgs.tablaNombre}</f:facet>#{vauser.nombre}</p:column>
 				<p:column>
 					<f:facet name="header">#{msgs.Seleccionar}</f:facet>
-					<p:commandLink action="#{controllerSeguidor.seguidores(vauser)}"
-						type="submit" value="#{msgs.tablaBorrarUsu}" immediate="true"
+					<p:commandLink action="#{controllerUsuario.filtrar1(vauser.email)}"
+						type="submit" value="#{msgs.tablaAñadirSeguidor}" immediate="true"
 						update="tablalistadoAdmin :mensajes">
 					</p:commandLink>
 				</p:column>
 			</p:dataTable>
+			
+			<p:outputLabel  value="Basic"/>
+                <p:selectOneMenu id="option" value="recibido" dynamic="true">
+                    <f:selectItem itemLabel="Select One" itemValue=""/>
+                    <f:selectItems value="#{controllerUsuario.usuarios}" var="vauser45"
+                                itemLabel="#{vauser45.email}" itemValue="#{vauser45.email}"/>   
+                                <input type="submit" value="Enviar" onclick="#{controllerUsuario.filtrar1(vauser45.email)}"/>         
+                </p:selectOneMenu>
+                
+     
+               
 		</h:form>
 	</ui:define>
 		

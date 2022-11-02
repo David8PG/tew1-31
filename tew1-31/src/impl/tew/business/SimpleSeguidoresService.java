@@ -6,6 +6,7 @@ import com.tew.business.SeguidoresService;
 import com.tew.business.exception.EntityAlreadyExistsException;
 import com.tew.business.exception.EntityNotFoundException;
 import com.tew.model.Seguidores;
+import com.tew.presentation.BeanSeguidor;
 
 import impl.tew.business.classes.SeguidoresOperaciones;
 
@@ -73,6 +74,18 @@ public class SimpleSeguidoresService implements SeguidoresService{
 	public List<Seguidores> getCandidatos1(String email) throws Exception {
 
 		return new SeguidoresOperaciones().getCandidatos1(email);
+	}
+
+	@Override
+	public void save12(BeanSeguidor seguidor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void save12(String s, String l) throws EntityAlreadyExistsException {
+		new SeguidoresOperaciones().save12(s,l);
+		
 	}
 
 

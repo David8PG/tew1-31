@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templates/template-usuarios.xhtml">
+
+	<ui:define name="titulo">
+     #{msgs.tituloListaSeg}
+    </ui:define>
+
+	<ui:define name="cuerpo">
+	
+		<h:form>
+		
+			<p:dataTable id="tabla90" var="vauser16"
+				value="#{controllerUsuario.usuarios}" border="1">
+				<p:column>
+					<f:facet name="header">#{msgs.tablaEmail}</f:facet>#{vauser16.email}</p:column>
+				<p:column>
+				    <f:facet name="header">#{msgs.tablaAñadirSeguidor}</f:facet>
+				    <p:commandButton  action="#{controllerSeguidor.salva2(vauser16.email, vauser16.email)}"
+						type="submit" value="#{msgs.añadirSeguidor}" immediate="true"
+						update="tabla90">
+					</p:commandButton> 
+				</p:column>  
+			</p:dataTable>
+		</h:form>
+	</ui:define>
+		
+	<ui:define name="pie">
+		<ui:include src="/snippets/salirSesion.xhtml" />
+	</ui:define>
+</ui:composition>

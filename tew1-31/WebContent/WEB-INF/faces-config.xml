@@ -124,7 +124,24 @@
 		</navigation-case>
 	</navigation-rule>
 	
+		<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-action>#{controllerUsuario.filtrar1(vauser.email)}</from-action>
+			<from-outcome>exito910</from-outcome>
+			<to-view-id>/restricted/listadoSeguidoresAdmin.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 	
+	
+	<navigation-rule>
+		<from-view-id>/restricted/listadoSeguidoresAdmin.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{controllerSeguidor.salva2(vauser16.email_seguidor, vauser16.email)}</from-action>
+			<from-outcome>exito145</from-outcome>
+			<to-view-id>/restricted/añadirSeguidorAdmin.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 	
 	<!-- ///////////////////////// NUEVA FOTO ///////////////////////////////// -->
 	<navigation-rule>

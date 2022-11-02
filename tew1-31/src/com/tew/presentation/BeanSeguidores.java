@@ -90,6 +90,21 @@ public class BeanSeguidores implements Serializable {
 		}
 	}
 	
+	public String listado3(){
+
+		SeguidoresService service;
+		try {
+
+			service= Factories.services.createSeguidoresService();
+			seguidores = (Seguidores []) service.getSeguidores().toArray(new Seguidores[0]);
+			return "exito4080";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "error";
+		}
+	}
+	
 	
 	public String listadoEmail2(){
 
@@ -99,6 +114,20 @@ public class BeanSeguidores implements Serializable {
 			service= Factories.services.createSeguidoresService();
 			seguidores = (Seguidores []) service.getSeguidores(login.getEmail()).toArray(new Seguidores[0]);
 			return "exito3";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "error";
+		}
+	}
+	public String listadoEmail12(String s){
+
+		SeguidoresService service;
+		try {
+
+			service= Factories.services.createSeguidoresService();
+			seguidores = (Seguidores []) service.getSeguidores(s).toArray(new Seguidores[0]);
+			return "exito305";
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -176,6 +205,22 @@ public class BeanSeguidores implements Serializable {
 			service.save(seguidor);
 			seguidores = (Seguidores []) service.getSeguidores().toArray(new Seguidores[0]);
 			return "exito";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "error";
+		}	
+	}
+	
+	public String salva2(String s, String l) {
+
+		SeguidoresService service;
+		try {
+			System.out.print("desde salva2"+s+l);
+			service = Factories.services.createSeguidoresService();
+			service.save12(s,l);
+			seguidores = (Seguidores []) service.getSeguidores().toArray(new Seguidores[0]);
+			return "exito145";
 		}
 		catch(Exception e) {
 			e.printStackTrace();

@@ -91,4 +91,16 @@ public class SeguidoresOperaciones {
 		SeguidoresDao seguidores = Factories.persistence.createSeguidoresDao();
 		return seguidores.getCandidatos1(email_usuario);
 	}
+
+	public void save12(String s, String l) throws EntityAlreadyExistsException {
+		SeguidoresDao seguidores = Factories.persistence.createSeguidoresDao();
+
+		try {
+			seguidores.save12(s,l);
+		}
+		catch(AlreadyPersistedException e){
+			throw new EntityAlreadyExistsException("No se ha podido guardar la solicitud al seguidor " + s + e);
+		}
+		
+	}
 }

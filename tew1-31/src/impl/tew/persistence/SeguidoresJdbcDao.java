@@ -124,6 +124,64 @@ public class SeguidoresJdbcDao implements SeguidoresDao {
 		return seguidores;
 	}
 
+	
+	@Override
+	public List<Seguidores> getSeguidores12(String email_usuario) {
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		Connection con = null;
+
+		List<Seguidores> seguidores = new ArrayList<Seguidores>();
+
+		try {
+
+			String SQL_DRV = "org.hsqldb.jdbcDriver";
+			String SQL_URL = "jdbc:hsqldb:hsql://localhost/localDB";
+
+			Class.forName(SQL_DRV);
+
+			con = DriverManager.getConnection(SQL_URL, "sa", "");
+			ps = con.prepareStatement("select * from PUBLIC.SEGUIDORES where EMAIL_SEGUIDOR = ? and ACEPTADA = '0' ");
+			ps.setString(1, email_usuario);
+
+			rs = ps.executeQuery();
+
+			while (rs.next()) {
+
+				Seguidores seguidor = new Seguidores();
+
+				seguidor.setEmail_usuario(rs.getString("EMAIL_USUARIO"));
+				seguidor.setEmail_seguidor(rs.getString("EMAIL_SEGUIDOR"));
+				seguidor.setAceptada(rs.getBoolean("ACEPTADA"));
+
+				seguidores.add(seguidor);
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			throw new PersistenceException("Driver not found", e);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new PersistenceException("Invalid SQL or database schema", e);
+		} finally {
+			if (ps != null) {
+				try {
+					ps.close();
+				} catch (Exception ex) {
+				}
+			}
+			;
+			if (con != null) {
+				try {
+					con.close();
+				} catch (Exception ex) {
+				}
+			}
+			;
+		}
+
+		return seguidores;
+	}
+	
 	@Override
 	public void save(Seguidores a) throws AlreadyPersistedException {
 
@@ -148,6 +206,56 @@ public class SeguidoresJdbcDao implements SeguidoresDao {
 			rows = ps.executeUpdate();
 			if (rows != 1) {
 				throw new AlreadyPersistedException("Seguidor " + a + " already persisted");
+			}
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			throw new PersistenceException("Driver not found", e);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new PersistenceException("Invalid SQL or database schema", e);
+		} finally {
+			if (ps != null) {
+				try {
+					ps.close();
+				} catch (Exception ex) {
+				}
+			}
+			;
+			if (con != null) {
+				try {
+					con.close();
+				} catch (Exception ex) {
+				}
+			}
+			;
+		}
+	}
+	
+	@Override
+	public void save12(String s, String l) throws AlreadyPersistedException {
+
+		PreparedStatement ps = null;
+		Connection con = null;
+		int rows = 0;
+
+		try {
+
+			String SQL_DRV = "org.hsqldb.jdbcDriver";
+			String SQL_URL = "jdbc:hsqldb:hsql://localhost/localDB";
+
+			Class.forName(SQL_DRV);
+			con = DriverManager.getConnection(SQL_URL, "sa", "");
+			ps = con.prepareStatement(
+					"insert into PUBLIC.SEGUIDORES (EMAIL_USUARIO, EMAIL_SEGUIDOR, ACEPTADA) " + "values (?, ?, ?)");
+
+			ps.setString(2, s);
+			ps.setString(3, l);
+			ps.setBoolean(3, true);
+
+			rows = ps.executeUpdate();
+			if (rows != 1) {
+				throw new AlreadyPersistedException("Seguidor " + s + " already persisted");
 			}
 
 		} catch (ClassNotFoundException e) {
