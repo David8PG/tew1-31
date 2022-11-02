@@ -90,6 +90,22 @@ public class BeanUsuarios extends Usuarios implements  Serializable {
 		}
 	}
 	
+	
+	public String listado2() {
+
+		UsuariosService service;
+		try {
+
+			service= Factories.services.createUsuariosService();
+			usuarios = (Usuarios[]) service.getUsuarios().toArray(new Usuarios[0]);
+			return "exito106";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "error";
+		}
+	}
+	
 	public String filtrar() {
 
 		UsuariosService service;

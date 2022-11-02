@@ -75,6 +75,20 @@ public class BeanSeguidores implements Serializable {
 			return "error";
 		}
 	}
+	public String listado2(){
+
+		SeguidoresService service;
+		try {
+
+			service= Factories.services.createSeguidoresService();
+			seguidores = (Seguidores []) service.getSeguidores().toArray(new Seguidores[0]);
+			return "exito408";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "error";
+		}
+	}
 	
 	
 	public String listadoEmail2(){

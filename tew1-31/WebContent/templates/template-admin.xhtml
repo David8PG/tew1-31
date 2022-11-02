@@ -34,6 +34,10 @@
 						<p:separator />
 						<p:menuitem value="#{msgs.enlaceReiniciaBD}"
 							action="#{controllerUsuario.reset}" />
+						<p:separator />
+						<p:menuitem value="#{msgs.añadirSeguidor}"
+							action="#{controllerUsuario.listado2}" />
+						
 					</p:submenu>
 				</ui:insert>
 
@@ -44,6 +48,8 @@
 					<p:menuitem value="#{msgs.enlaceIdiomaEN}"
 						actionListener="#{settings.setEnglish}" update="@all" />
 				</p:submenu>
+				
+				
 			</p:menubar>
 
 		</h:form>
